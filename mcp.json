@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "github-oauth-mcp-local": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "http://localhost:8788/mcp"
+      ],
+      "env": {},
+      "metadata": {
+        "description": "GitHub OAuth MCP Server (Local Development)",
+        "tools": ["add", "userInfoOctokit", "generateImage"],
+        "authentication": "OAuth 2.0 via GitHub Enterprise (symbolaico)"
+      }
+    }
+  }
+}
