@@ -1,0 +1,13 @@
+{
+  "enabledPlugins": {
+    "formatter@company-tools": true,
+    "deployer@company-tools": true,
+    "analyzer@security-plugins": false
+  },
+  "extraKnownMarketplaces": {
+    "company-tools": {
+      "source": "github",
+      "repo": "company/claude-plugins"
+    }
+  }
+}
