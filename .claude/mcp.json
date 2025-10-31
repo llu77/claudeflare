@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "cloudflare-docs": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/mcp"],
+      "description": "Cloudflare documentation MCP server"
+    },
+    "cloudflare-bindings": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://bindings.mcp.cloudflare.com/mcp"],
+      "description": "Cloudflare Workers bindings MCP server"
+    },
+    "cloudflare-observability": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://observability.mcp.cloudflare.com/mcp"],
+      "description": "Cloudflare observability and monitoring MCP server"
+    },
+    "cloudflare-radar": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://radar.mcp.cloudflare.com/mcp"],
+      "description": "Cloudflare Radar API MCP server"
+    },
+    "cloudflare-browser": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://browser.mcp.cloudflare.com/mcp"],
+      "description": "Cloudflare browser rendering MCP server"
+    }
+  }
+}
