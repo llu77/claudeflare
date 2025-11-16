@@ -1,2 +1,6 @@
 # Claude Code local settings (per-machine overrides)
 .claude/settings.local.json
+
+# Node.js dependencies (for MCP servers)
+node_modules/
+.claude/mcp-servers/*/node_modules/
