@@ -2,11 +2,11 @@ name: Claude Code
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened, labeled, assigned, edited]
   issue_comment:
     types: [created]
   pull_request:
-    types: [opened, labeled, synchronize]
+    types: [opened, labeled, synchronize, ready_for_review, reopened]
 
 jobs:
   claude-code:
@@ -15,10 +15,22 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
+      actions: read
 
     steps:
       - name: Claude Code Action Official
         uses: anthropics/claude-code-action@v1
         with:
+          # Authentication
           github_token: ${{ secrets.GITHUB_TOKEN }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          # Trigger configuration
+          trigger_phrase: "@claude"
+          label_trigger: "claude"
+          branch_prefix: "claude/"
+
+          # Features
+          use_sticky_comment: "true"
+          track_progress: "true"
+          use_commit_signing: "false"
